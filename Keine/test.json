@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the output of print(2 ** 3) in Python?",
+    "options": ["6", "8", "9", "12"],
+    "answer": "8"
+  },
+  {
+    "question": "Which keyword is used to define a function in Python?",
+    "options": ["func", "define", "def", "function"],
+    "answer": "def"
+  },
+  {
+    "question": "Which of the following data types is immutable in Python?",
+    "options": ["List", "Dictionary", "Set", "Tuple"],
+    "answer": "Tuple"
+  },
+  {
+    "question": "What is the correct file extension for Python files?",
+    "options": [".pt", ".pyt", ".py", ".python"],
+    "answer": ".py"
+  }
+]
