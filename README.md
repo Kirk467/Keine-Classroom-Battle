@@ -8,6 +8,8 @@ Keine's Classroom Battle (or Keine for short) is an educational game based on pr
 
 - Singleplayer Quiz Battles: Just like Multiplayer Quiz Battles, the user can choose their own .json file and set the quiz timer. However, in this mode, the user can proceed offline/without a Steam account. After the quiz, instead of displaying the top scorers, the game will display statistics such as questions answered correctly.
 
+- Quiz Randomization and Results Statistics: During Multiplayer, the top 10 scorers will be shown on the leaderboard, with the winner either being the highest scorer or a tie. In the Singleplayer mode, quizzes can be randomized, with questions having differing difficulty levels, and subjects/categories being shown at the end of the quiz so that the user can see which subjects they struggle at.
+
 ## Acknowledgements
 
  - [Based on Godot Dev Checkpoint's Tutorial on Building a Multiplayer Party Game in Godot 4.5 ](https://youtube.com/playlist?list=PLVzjdZVCXNTzmpnbYazr1VE6--WW_HB_B&si=h1WKfk1BSN6C3hEp)
