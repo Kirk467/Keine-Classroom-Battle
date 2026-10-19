@@ -8,6 +8,12 @@ Keine's Classroom Battle (or Keine for short) is an educational game based on pr
 
 - Singleplayer Quiz Battles: Just like Multiplayer Quiz Battles, the user can choose their own .json file and set the quiz timer. However, in this mode, the user can proceed offline/without a Steam account. After the quiz, instead of displaying the top scorers, the game will display statistics such as questions answered correctly.
 
+## Acknowledgements
+
+ - [Based on Godot Dev Checkpoint's ](https://youtube.com/playlist?list=PLVzjdZVCXNTzmpnbYazr1VE6--WW_HB_B&si=h1WKfk1BSN6C3hEp)
+ - [Main Menu Music: Touhou Project - Nostalgic Blood of the East ~ Old World (Calm Night Remix) by 
+Stas Gavrik](https://youtu.be/RmdLDE2YyoY)
+ - [Lobby Music: ULiL Character Select Theme: Gensokyo Mystery Discovery Composed by  U2 Akiyama](https://youtu.be/d8kR4kTH4-0)
 
 ## Authors
 
