@@ -22,3 +22,8 @@ Stas Gavrik](https://youtu.be/RmdLDE2YyoY)
 
 - [@Kirk467](https://github.com/Kirk467)
 
+AI Declaration This project was developed with the assistance of AI (specifically, a large language model). The AI was used for:
+
+☑ Debugging code and other problems that came about after using Godot for the first time (especially since Gemini is the first thing that pops up.
+
+Program Signature Developer: Kirk Lester P. Mangco: IT102L - Object-Oriented Programming Section: A224
