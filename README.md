@@ -11,9 +11,12 @@ Keine's Classroom Battle (or Keine for short) is an educational game based on pr
 ## Acknowledgements
 
  - [Based on Godot Dev Checkpoint's Tutorial on Building a Multiplayer Party Game in Godot 4.5 ](https://youtube.com/playlist?list=PLVzjdZVCXNTzmpnbYazr1VE6--WW_HB_B&si=h1WKfk1BSN6C3hEp)
- - [Main Menu Music: Touhou Project - Nostalgic Blood of the East ~ Old World (Calm Night Remix) by 
+ - [Main Menu Music: Touhou Project - Nostalgic Blood of the East ~ Old World (Calm Night Remix); Arranged by 
 Stas Gavrik](https://youtu.be/RmdLDE2YyoY)
+ - Arranged based on: 懐かしき東方の血　～ Old World (Natsukashiki touhou no chi) ||	Nostalgic Blood of the East ~ Old World from Touhou Eiyashou
+(Eternal Night Vignette) ~ Imperishable Night (東方永夜抄　～ Imperishable Night) 
  - [Lobby Music: ULiL Character Select Theme: Gensokyo Mystery Discovery Composed by  U2 Akiyama](https://youtu.be/d8kR4kTH4-0)
+ - The assets and music are derivatives or creations that are based on the Touhou Project series by ZUN / Team Shanghai Alice.
 
 ## Authors
 
