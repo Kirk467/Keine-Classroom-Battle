@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cj8lh1pjo0ke"
+path="res://.godot/imported/Touhou Project - Nostalgic Blood of the East ~ Old World (Calm Night Remix).mp3-6e7bb64c5c8074143d1ceac51161e027.mp3str"
+
+[deps]
+
+source_file="res://audio/Touhou Project - Nostalgic Blood of the East ~ Old World (Calm Night Remix).mp3"
+dest_files=["res://.godot/imported/Touhou Project - Nostalgic Blood of the East ~ Old World (Calm Night Remix).mp3-6e7bb64c5c8074143d1ceac51161e027.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=3.2
+bpm=0.0
+beat_count=0
+bar_beats=4

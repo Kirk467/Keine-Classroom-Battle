@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://bo4upv5t0rv02"]
+
+[ext_resource type="Script" uid="uid://cvrd0fvxcn4au" path="res://home.gd" id="1_o1ld7"]
+[ext_resource type="Shader" uid="uid://bpow5b1ec5tvg" path="res://checkerboard.gdshader" id="1_tt30a"]
+[ext_resource type="PackedScene" uid="uid://cvxj1ovefesgh" path="res://buttons/button.tscn" id="2_1ey7h"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1ey7h"]
+shader = ExtResource("1_tt30a")
+shader_parameter/size = 45.00000209
+shader_parameter/color1 = Color(0.19434983, 0.19434905, 0.19434923, 1)
+shader_parameter/color2 = Color(0.12591085, 0.12591085, 0.12591082, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tt30a"]
+bg_color = Color(0, 0.39215687, 0.92156863, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 12
+
+[node name="Home" type="Control" unique_id=1146716517]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o1ld7")
+
+[node name="BG" type="ColorRect" parent="." unique_id=703434585]
+material = SubResource("ShaderMaterial_1ey7h")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=863752814]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -265.0
+offset_top = 32.0
+offset_right = 265.0
+offset_bottom = 109.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 47
+theme_override_styles/normal = SubResource("StyleBoxFlat_tt30a")
+bbcode_enabled = true
+text = "[wave]SUPER COOL NAME[/wave]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=8132474]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.0
+offset_top = -88.0
+offset_right = 91.0
+offset_bottom = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="BtnsBtn" parent="VBoxContainer" unique_id=2083984559 instance=ExtResource("2_1ey7h")]
+layout_mode = 2
+text = "Buttons"
+
+[node name="StatsBtn" parent="VBoxContainer" unique_id=2035235093 instance=ExtResource("2_1ey7h")]
+layout_mode = 2
+text = "Stats"
+
+[node name="CardsBtn" parent="VBoxContainer" unique_id=268485788 instance=ExtResource("2_1ey7h")]
+layout_mode = 2
+text = "Cards"
+
+[node name="AnimationBtn" parent="VBoxContainer" unique_id=1673313262 instance=ExtResource("2_1ey7h")]
+layout_mode = 2
+text = "Animation"
+
+[connection signal="pressed" from="VBoxContainer/BtnsBtn" to="." method="_on_btns_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/StatsBtn" to="." method="_on_stats_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/CardsBtn" to="." method="_on_cards_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/AnimationBtn" to="." method="_on_animation_btn_pressed"]

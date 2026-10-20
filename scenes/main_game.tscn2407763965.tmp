@@ -1,0 +1,346 @@
+[gd_scene format=3 uid="uid://co1fv2iup20dc"]
+
+[ext_resource type="Script" uid="uid://civsyd3e7oxll" path="res://scripts/main_game.gd" id="1_s3esy"]
+[ext_resource type="Texture2D" uid="uid://y3w8h5gwgvxg" path="res://assets/blackboard test.jpg" id="2_72e8q"]
+[ext_resource type="Theme" uid="uid://lmkr8tk8vxup" path="res://assets/test_theme.tres" id="3_d2op2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qbdty"]
+bg_color = Color(0.35686275, 0.44313726, 0.44313726, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.23137255, 0.23921569, 0.2784314, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v5gy4"]
+bg_color = Color(0.54509807, 0.6392157, 0.34901962, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(0.23137255, 0.23921569, 0.2784314, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="MainGame" type="Control" unique_id=811361046]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s3esy")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=805753023]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.16470589, 0.12941177, 0.27058825, 1)
+
+[node name="SplitContainer" type="VBoxContainer" parent="." unique_id=76219702]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 1
+
+[node name="Stage" type="PanelContainer" parent="SplitContainer" unique_id=1264067405]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LobbyUI" type="ColorRect" parent="SplitContainer/Stage" unique_id=438812893]
+layout_mode = 2
+color = Color(1.732707e-06, 0.7435542, 0.93801075, 1)
+
+[node name="LobbyContainer" type="VBoxContainer" parent="SplitContainer/Stage/LobbyUI" unique_id=82079980]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="SplitContainer/Stage/LobbyUI/LobbyContainer" unique_id=1409150546]
+layout_mode = 2
+text = "Available Lobbies:"
+
+[node name="RefreshButton" type="Button" parent="SplitContainer/Stage/LobbyUI/LobbyContainer" unique_id=1352778457]
+layout_mode = 2
+theme = ExtResource("3_d2op2")
+text = "Refresh List"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SplitContainer/Stage/LobbyUI/LobbyContainer" unique_id=1315537803]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LobbyList" type="VBoxContainer" parent="SplitContainer/Stage/LobbyUI/LobbyContainer/ScrollContainer" unique_id=100282236]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="DisconnectButton" type="Button" parent="SplitContainer/Stage/LobbyUI" unique_id=1299866393]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.85882354, 0, 0, 1)
+text = "DISCONNECT"
+
+[node name="HostButton" type="Button" parent="SplitContainer/Stage/LobbyUI" unique_id=619084463]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "HOST GAME"
+
+[node name="StartGameButton" type="Button" parent="SplitContainer/Stage/LobbyUI" unique_id=991086465]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 1, 0.48235294, 1)
+text = "START QUIZ"
+
+[node name="FindFileButton" type="Button" parent="SplitContainer/Stage/LobbyUI" unique_id=267732011]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 310.0
+offset_right = 740.0
+offset_bottom = 318.0
+
+[node name="PlayerListContainer" type="VBoxContainer" parent="SplitContainer/Stage/LobbyUI" unique_id=37306395]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FileDialog" type="FileDialog" parent="SplitContainer/Stage/LobbyUI" unique_id=1212756552]
+oversampling_override = 1.0
+title = "Open a File"
+position = Vector2i(0, 36)
+file_mode = 0
+access = 2
+filters = PackedStringArray("*json")
+use_native_dialog = true
+
+[node name="QuestionUI" type="TextureRect" parent="SplitContainer/Stage" unique_id=1970873695]
+visible = false
+layout_mode = 2
+texture = ExtResource("2_72e8q")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SplitContainer/Stage/QuestionUI" unique_id=1921394249]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 52.0
+offset_top = 58.0
+offset_right = -55.0
+offset_bottom = -52.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="SplitContainer/Stage/QuestionUI/VBoxContainer" unique_id=245711840]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 60
+text = "Waiting for question..."
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="SplitContainer/Stage/QuestionUI" unique_id=1310558828]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 63.0
+offset_right = 300.0
+offset_bottom = 90.0
+grow_horizontal = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_qbdty")
+theme_override_styles/fill = SubResource("StyleBoxFlat_v5gy4")
+max_value = 10.0
+value = 5.0
+show_percentage = false
+
+[node name="ResultsUI" type="TextureRect" parent="SplitContainer/Stage" unique_id=384642717]
+visible = false
+layout_mode = 2
+texture = ExtResource("2_72e8q")
+expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SplitContainer/Stage/ResultsUI" unique_id=1787522453]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 55.0
+offset_top = 51.0
+offset_right = -55.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WinnerLabel" type="Label" parent="SplitContainer/Stage/ResultsUI/VBoxContainer" unique_id=878099360]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 30
+text = "Winner: ???"
+horizontal_alignment = 1
+
+[node name="ScoreListLabel" type="Label" parent="SplitContainer/Stage/ResultsUI/VBoxContainer" unique_id=1656289660]
+layout_mode = 2
+text = "SCORES:
+player_1_name: 0
+player_2_name: 0
+player_3_name: 0
+player_4_name: 0
+player_5_name: 0
+player_6_name: 0
+player_7_name: 0
+player_8_name: 0
+player_9_name: 0
+player_10_name: 0"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="SplitContainer/Stage/ResultsUI/VBoxContainer" unique_id=917542503]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+
+[node name="Result1" type="Button" parent="SplitContainer/Stage/ResultsUI/VBoxContainer/GridContainer" unique_id=63162372]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_d2op2")
+disabled = true
+
+[node name="Result2" type="Button" parent="SplitContainer/Stage/ResultsUI/VBoxContainer/GridContainer" unique_id=418155905]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_d2op2")
+disabled = true
+
+[node name="Result3" type="Button" parent="SplitContainer/Stage/ResultsUI/VBoxContainer/GridContainer" unique_id=1806707734]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_d2op2")
+disabled = true
+
+[node name="Result4" type="Button" parent="SplitContainer/Stage/ResultsUI/VBoxContainer/GridContainer" unique_id=805765585]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_d2op2")
+disabled = true
+
+[node name="NextRoundButton" type="Button" parent="SplitContainer/Stage/ResultsUI" unique_id=1278870972]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 1, 0.48235294, 1)
+text = "NEXT ROUND"
+
+[node name="Desk" type="PanelContainer" parent="SplitContainer" unique_id=932961293]
+visible = false
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme = ExtResource("3_d2op2")
+
+[node name="MarginContainer" type="MarginContainer" parent="SplitContainer/Desk" unique_id=802840526]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="GridContainer" type="GridContainer" parent="SplitContainer/Desk/MarginContainer" unique_id=485078289]
+layout_mode = 2
+columns = 2
+
+[node name="Answer1" type="Button" parent="SplitContainer/Desk/MarginContainer/GridContainer" unique_id=2137222347]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_d2op2")
+
+[node name="Answer2" type="Button" parent="SplitContainer/Desk/MarginContainer/GridContainer" unique_id=1941047767]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_d2op2")
+
+[node name="Answer3" type="Button" parent="SplitContainer/Desk/MarginContainer/GridContainer" unique_id=1192899940]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_d2op2")
+
+[node name="Answer4" type="Button" parent="SplitContainer/Desk/MarginContainer/GridContainer" unique_id=1753834520]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_d2op2")
+
+[node name="DebugLabel" type="Label" parent="." unique_id=1177914282]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -85.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "Debug Info"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="RoundTimer" type="Timer" parent="." unique_id=441753844]
+wait_time = 10.0
+one_shot = true

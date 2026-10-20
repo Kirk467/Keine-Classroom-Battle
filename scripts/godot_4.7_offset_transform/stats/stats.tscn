@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://da3rdotuyisxl"]
+
+[ext_resource type="PackedScene" uid="uid://cvxj1ovefesgh" path="res://buttons/button.tscn" id="1_v54lb"]
+[ext_resource type="Script" uid="uid://c5wjo58vyvwcn" path="res://stats/stats.gd" id="1_vnw6e"]
+[ext_resource type="Shader" uid="uid://bpow5b1ec5tvg" path="res://checkerboard.gdshader" id="3_g6v8b"]
+[ext_resource type="Script" uid="uid://gmp1wxiwy1n8" path="res://go_home.gd" id="4_wnqt8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wnqt8"]
+shader = ExtResource("3_g6v8b")
+shader_parameter/size = 45.00000209
+shader_parameter/color1 = Color(0.19434983, 0.19434905, 0.19434923, 1)
+shader_parameter/color2 = Color(0.12591085, 0.12591085, 0.12591082, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v54lb"]
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(3.2247603e-06, 0.75248694, 0.46866262, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wnqt8"]
+bg_color = Color(0, 0.39215687, 0.92156863, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 12
+
+[node name="StatsExample" type="Control" unique_id=1222613739]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vnw6e")
+
+[node name="BG" type="ColorRect" parent="." unique_id=1460087059]
+material = SubResource("ShaderMaterial_wnqt8")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stats" type="VBoxContainer" parent="." unique_id=1870871100]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -141.0
+offset_top = -111.0
+offset_right = 141.0
+offset_bottom = 145.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Stats" unique_id=182159329]
+layout_mode = 2
+theme_override_colors/font_color = Color(1.6244128e-07, 0.2627049, 0.1496042, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_v54lb")
+text = "STAT BLABLA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Stats" unique_id=1171885142]
+layout_mode = 2
+theme_override_colors/font_color = Color(1.6244128e-07, 0.2627049, 0.1496042, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_v54lb")
+text = "STAT BLABLA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Stats" unique_id=936756530]
+layout_mode = 2
+theme_override_colors/font_color = Color(1.6244128e-07, 0.2627049, 0.1496042, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_v54lb")
+text = "STAT BLABLA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="Stats" unique_id=2136256321]
+layout_mode = 2
+theme_override_colors/font_color = Color(1.6244128e-07, 0.2627049, 0.1496042, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_v54lb")
+text = "STAT BLABLA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="Stats" unique_id=1908619377]
+layout_mode = 2
+theme_override_colors/font_color = Color(1.6244128e-07, 0.2627049, 0.1496042, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_v54lb")
+text = "STAT BLABLA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="Stats" unique_id=463012517]
+layout_mode = 2
+theme_override_colors/font_color = Color(1.6244128e-07, 0.2627049, 0.1496042, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_v54lb")
+text = "STAT BLABLA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="Stats" unique_id=1295769576]
+layout_mode = 2
+theme_override_colors/font_color = Color(1.6244128e-07, 0.2627049, 0.1496042, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_v54lb")
+text = "STAT BLABLA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label8" type="Label" parent="Stats" unique_id=857093612]
+layout_mode = 2
+theme_override_colors/font_color = Color(1.6244128e-07, 0.2627049, 0.1496042, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_v54lb")
+text = "STAT BLABLA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label9" type="Label" parent="Stats" unique_id=1489817855]
+layout_mode = 2
+theme_override_colors/font_color = Color(1.6244128e-07, 0.2627049, 0.1496042, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_v54lb")
+text = "STAT BLABLA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ActionBtns" type="HBoxContainer" parent="." unique_id=1226257724]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -82.0
+offset_top = -83.0
+offset_right = 82.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="AppearBtn" parent="ActionBtns" unique_id=2096939300 instance=ExtResource("1_v54lb")]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Appear"
+
+[node name="HomeBtn" parent="." unique_id=2083984559 instance=ExtResource("1_v54lb")]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 112.0
+offset_bottom = 58.0
+text = "HOME"
+
+[node name="GoHome" type="Node" parent="HomeBtn" unique_id=395587411]
+script = ExtResource("4_wnqt8")
+metadata/_custom_type_script = "uid://gmp1wxiwy1n8"
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1373975049]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.0
+offset_top = 32.0
+offset_right = 90.0
+offset_bottom = 109.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 47
+theme_override_styles/normal = SubResource("StyleBoxFlat_wnqt8")
+bbcode_enabled = true
+text = "[wave]STATS[/wave]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://cupweqrwogjhf"]
+
+[ext_resource type="Texture2D" uid="uid://cbwulltfpn404" path="res://assets/skytest.png" id="1_ekxnf"]
+[ext_resource type="Script" uid="uid://dethy7qnll4fg" path="res://scenes/buttoncontrol.gd" id="1_tbmy8"]
+[ext_resource type="Texture2D" uid="uid://caxvyflxrhvpn" path="res://assets/keinetest.png" id="2_bqqt6"]
+[ext_resource type="Script" uid="uid://bycpvgbo7aukk" path="res://scenes/keine.gd" id="3_8ln24"]
+[ext_resource type="Theme" uid="uid://lmkr8tk8vxup" path="res://assets/test_theme.tres" id="3_bqqt6"]
+[ext_resource type="Script" uid="uid://dbqbwtvpffpjs" path="res://scenes/button_4.gd" id="4_wu84c"]
+[ext_resource type="Script" uid="uid://7w27ac1lqqev" path="res://scenes/rich_text_label.gd" id="5_oa1go"]
+[ext_resource type="Script" uid="uid://dyglpeprvxhk5" path="res://scenes/MultiplayerButton.gd" id="5_rtw2f"]
+[ext_resource type="Script" uid="uid://c03unwosau886" path="res://scenes/button.gd" id="7_jk1qb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1vivr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqqt6"]
+content_margin_left = 9.0
+bg_color = Color(0.9882353, 0.94509804, 0.92156863, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.33333334, 0.3764706, 0.6, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.1764706, 0.17254902, 0.2784314, 0.42352942)
+shadow_size = 10
+shadow_offset = Vector2(7, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln24"]
+bg_color = Color(0.7372549, 0, 0.24705882, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.7372549, 0, 0.24705882, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu84c"]
+bg_color = Color(0.8117647, 0.3137255, 0.32941177, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.7372549, 0, 0.24705882, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Control" type="Control" unique_id=117312024]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tbmy8")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1106404612]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ekxnf")
+expand_mode = 1
+
+[node name="keine" type="TextureRect" parent="." unique_id=632369637]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 14.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bqqt6")
+expand_mode = 1
+script = ExtResource("3_8ln24")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="keine" unique_id=2007005268]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = -84.0
+offset_right = 530.0
+offset_bottom = 31.0
+grow_vertical = 0
+theme = ExtResource("3_bqqt6")
+theme_override_font_sizes/normal_font_size = 50
+text = " © Credits"
+fit_content = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=218667675]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -640.0
+offset_top = 77.0
+offset_right = 640.0
+offset_bottom = 192.0
+grow_horizontal = 2
+theme = ExtResource("3_bqqt6")
+theme_override_font_sizes/bold_font_size = 100
+bbcode_enabled = true
+text = "[center]Keine's Classroom Battle[/center]"
+fit_content = true
+script = ExtResource("5_oa1go")
+
+[node name="Panel" type="Panel" parent="." unique_id=692272205]
+layout_mode = 0
+offset_left = 850.0
+offset_top = 248.0
+offset_right = 1263.0
+offset_bottom = 688.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1vivr")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1122012086]
+layout_mode = 0
+offset_right = 412.0
+offset_bottom = 439.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1093865199]
+custom_minimum_size = Vector2(-1, -1)
+layout_mode = 2
+theme = ExtResource("3_bqqt6")
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Button" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=893655077]
+custom_minimum_size = Vector2(-1, -1)
+propagate_maximum_size = true
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme = ExtResource("3_bqqt6")
+theme_override_font_sizes/font_size = 37
+text = "Singleplayer"
+script = ExtResource("7_jk1qb")
+
+[node name="MultiplayerButton" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=761119237]
+custom_minimum_size = Vector2(-1, -1)
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 37
+text = "Multiplayer"
+script = ExtResource("5_rtw2f")
+
+[node name="Button3" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1830276931]
+custom_minimum_size = Vector2(-1, -1)
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 37
+text = "Options"
+
+[node name="ExitButton" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=269123575]
+custom_minimum_size = Vector2(-1, -1)
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.7372549, 0, 0.24705882, 1)
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxFlat_bqqt6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8ln24")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wu84c")
+text = "Exit"
+script = ExtResource("4_wu84c")
+
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/ExitButton" to="Panel/MarginContainer/VBoxContainer/ExitButton" method="_on_pressed"]

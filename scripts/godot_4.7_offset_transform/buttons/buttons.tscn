@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://d2o0aygquit55"]
+
+[ext_resource type="Script" uid="uid://bnjy8mxd7pduk" path="res://buttons/buttons.gd" id="1_vjqx7"]
+[ext_resource type="Shader" uid="uid://bpow5b1ec5tvg" path="res://checkerboard.gdshader" id="2_6qb78"]
+[ext_resource type="PackedScene" uid="uid://cvxj1ovefesgh" path="res://buttons/button.tscn" id="2_w8pbg"]
+[ext_resource type="Script" uid="uid://gmp1wxiwy1n8" path="res://go_home.gd" id="4_ep1kq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ep1kq"]
+shader = ExtResource("2_6qb78")
+shader_parameter/size = 45.00000209
+shader_parameter/color1 = Color(0.19434983, 0.19434905, 0.19434923, 1)
+shader_parameter/color2 = Color(0.12591085, 0.12591085, 0.12591082, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ep1kq"]
+bg_color = Color(0, 0.39215687, 0.92156863, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 12
+
+[node name="ButtonsExample" type="Control" unique_id=2003661720]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vjqx7")
+
+[node name="BG" type="ColorRect" parent="." unique_id=1093832349]
+material = SubResource("ShaderMaterial_ep1kq")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ActionBtns" type="HBoxContainer" parent="." unique_id=820261818]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -186.0
+offset_top = -83.0
+offset_right = 186.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="OldBtn" parent="ActionBtns" unique_id=2083984559 instance=ExtResource("2_w8pbg")]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "appear"
+
+[node name="NewBtn" parent="ActionBtns" unique_id=602497105 instance=ExtResource("2_w8pbg")]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "appear"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=466305241]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.0
+offset_top = -111.0
+offset_right = 212.0
+offset_bottom = 111.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=179223704]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1306021254]
+layout_mode = 2
+text = "OLD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnContainerOld" type="VBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=1298216900]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="Button" parent="HBoxContainer/VBoxContainer/BtnContainerOld" unique_id=256970860 instance=ExtResource("2_w8pbg")]
+layout_mode = 2
+
+[node name="Button2" parent="HBoxContainer/VBoxContainer/BtnContainerOld" unique_id=1402580553 instance=ExtResource("2_w8pbg")]
+layout_mode = 2
+
+[node name="Button3" parent="HBoxContainer/VBoxContainer/BtnContainerOld" unique_id=596235968 instance=ExtResource("2_w8pbg")]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer" unique_id=1022876416]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2" unique_id=972220392]
+layout_mode = 2
+text = "NEW"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnContainerNew" type="VBoxContainer" parent="HBoxContainer/VBoxContainer2" unique_id=874487043]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="Button" parent="HBoxContainer/VBoxContainer2/BtnContainerNew" unique_id=946289257 instance=ExtResource("2_w8pbg")]
+layout_mode = 2
+offset_transform_enabled = true
+
+[node name="Button2" parent="HBoxContainer/VBoxContainer2/BtnContainerNew" unique_id=288631758 instance=ExtResource("2_w8pbg")]
+layout_mode = 2
+
+[node name="Button3" parent="HBoxContainer/VBoxContainer2/BtnContainerNew" unique_id=1536210304 instance=ExtResource("2_w8pbg")]
+layout_mode = 2
+
+[node name="HomeBtn" parent="." unique_id=1632596721 instance=ExtResource("2_w8pbg")]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 112.0
+offset_bottom = 58.0
+text = "HOME"
+
+[node name="GoHome" type="Node" parent="HomeBtn" unique_id=971102003]
+script = ExtResource("4_ep1kq")
+metadata/_custom_type_script = "uid://gmp1wxiwy1n8"
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=354944545]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -132.0
+offset_top = 32.0
+offset_right = 132.0
+offset_bottom = 109.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 47
+theme_override_styles/normal = SubResource("StyleBoxFlat_ep1kq")
+bbcode_enabled = true
+text = "[wave]BUTTONS[/wave]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1

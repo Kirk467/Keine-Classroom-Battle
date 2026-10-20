@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://cbet0tqjycopk"]
+
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_ivai2"]
+[ext_resource type="Script" uid="uid://bkptlyetypcjw" path="res://cards/card.gd" id="1_nwofj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6d1l"]
+bg_color = Color(0.099985994, 0.09998601, 0.099985965, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ifnqu"]
+bg_color = Color(0, 0.7529412, 0.47058824, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwofj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.7529412, 0.47058824, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 12
+
+[node name="Card" type="Panel" unique_id=853658833]
+custom_minimum_size = Vector2(184, 233)
+offset_right = 184.0
+offset_bottom = 233.0
+offset_transform_enabled = true
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j6d1l")
+script = ExtResource("1_nwofj")
+
+[node name="Top" type="Panel" parent="." unique_id=2031217003]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.155
+offset_bottom = -0.11500168
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ifnqu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Top" unique_id=80602315]
+modulate = Color(0, 0.2627451, 0.14901961, 1)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 36.0
+grow_horizontal = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "CARD NAME"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1498478332]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.185
+anchor_right = 1.0
+anchor_bottom = 0.51500005
+offset_top = -0.10499954
+offset_bottom = 0.004989624
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_ivai2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Description" type="RichTextLabel" parent="." unique_id=1756682176]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.060000002
+anchor_top = 0.57900006
+anchor_right = 0.94000006
+anchor_bottom = 0.966
+offset_left = -0.040000916
+offset_top = 0.09298706
+offset_right = 0.039993286
+offset_bottom = -0.07800293
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "This is a description, blablabla, bliblibli"
+fit_content = true
+scroll_active = false
+
+[node name="Border" type="Panel" parent="." unique_id=860642714]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nwofj")

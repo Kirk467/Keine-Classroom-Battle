@@ -1,0 +1,270 @@
+[gd_scene format=3 uid="uid://bbxpd225sox54"]
+
+[ext_resource type="Shader" uid="uid://bpow5b1ec5tvg" path="res://checkerboard.gdshader" id="1_i6s82"]
+[ext_resource type="PackedScene" uid="uid://cvxj1ovefesgh" path="res://buttons/button.tscn" id="2_ive6n"]
+[ext_resource type="Script" uid="uid://gmp1wxiwy1n8" path="res://go_home.gd" id="3_pcb4a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3c0am"]
+shader = ExtResource("1_i6s82")
+shader_parameter/size = 45.00000209
+shader_parameter/color1 = Color(0.19434983, 0.19434905, 0.19434923, 1)
+shader_parameter/color2 = Color(0.12591085, 0.12591085, 0.12591082, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i6s82"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.11858138, 0.11858139, 0.11858132, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5689727, 0.5689728, 0.5689725, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 12
+
+[sub_resource type="Animation" id="Animation_3c0am"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset_transform_position_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset_transform_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:offset_transform_rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_i6s82"]
+resource_name = "loop"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset_transform_position_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset_transform_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.89, 1.295)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:offset_transform_rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 3.0000002),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [0.0, -0.33161256, 0.33161256]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3c0am"]
+_data = {
+&"RESET": SubResource("Animation_3c0am"),
+&"loop": SubResource("Animation_i6s82")
+}
+
+[node name="AnimationPlayer" type="Control" unique_id=125515079]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="." unique_id=1354371239]
+material = SubResource("ShaderMaterial_3c0am")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=871733194]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_i6s82")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=2057825103]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer/HBoxContainer" unique_id=1595946170]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+offset_transform_enabled = true
+color = Color(0.56412363, 0.38762635, 1, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PanelContainer/HBoxContainer/ColorRect" unique_id=1174172122]
+libraries/ = SubResource("AnimationLibrary_3c0am")
+autoplay = &"loop"
+
+[node name="ColorRect2" type="ColorRect" parent="PanelContainer/HBoxContainer" unique_id=1763944447]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+offset_transform_enabled = true
+color = Color(0.84358627, 0.0009608823, 0.9044405, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PanelContainer/HBoxContainer/ColorRect2" unique_id=1188142709]
+libraries/ = SubResource("AnimationLibrary_3c0am")
+autoplay = &"loop"
+
+[node name="ColorRect3" type="ColorRect" parent="PanelContainer/HBoxContainer" unique_id=404440924]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+offset_transform_enabled = true
+color = Color(0.97038406, 0, 0.4287364, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PanelContainer/HBoxContainer/ColorRect3" unique_id=252559155]
+libraries/ = SubResource("AnimationLibrary_3c0am")
+autoplay = &"loop"
+
+[node name="ColorRect4" type="ColorRect" parent="PanelContainer/HBoxContainer" unique_id=1518816993]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+offset_transform_enabled = true
+color = Color(0.93302256, 0.25172037, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PanelContainer/HBoxContainer/ColorRect4" unique_id=676438237]
+libraries/ = SubResource("AnimationLibrary_3c0am")
+autoplay = &"loop"
+
+[node name="ColorRect5" type="ColorRect" parent="PanelContainer/HBoxContainer" unique_id=1102337612]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+offset_transform_enabled = true
+color = Color(0.66944474, 0.5063123, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PanelContainer/HBoxContainer/ColorRect5" unique_id=176489197]
+libraries/ = SubResource("AnimationLibrary_3c0am")
+autoplay = &"loop"
+
+[node name="PanelContainer2" type="PanelContainer" parent="." unique_id=391217442]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -268.0
+offset_top = -60.0
+offset_right = 268.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_i6s82")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer2" unique_id=1487426450]
+layout_mode = 2
+
+[node name="ContainerFree" type="Control" parent="PanelContainer2/HBoxContainer2" unique_id=1050736171]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer2/HBoxContainer2/ContainerFree" unique_id=567601507]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_top = -60.425
+offset_right = 100.0
+offset_bottom = 39.575
+rotation = -1.4032447
+scale = Vector2(1.825, 1.825)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+offset_transform_enabled = true
+color = Color(0.56412363, 0.38762635, 1, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="PanelContainer2/HBoxContainer2" unique_id=1202723451]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+offset_transform_enabled = true
+color = Color(0.84358627, 0.0009608823, 0.9044405, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="PanelContainer2/HBoxContainer2" unique_id=1585409089]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+offset_transform_enabled = true
+color = Color(0.97038406, 0, 0.4287364, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="PanelContainer2/HBoxContainer2" unique_id=509461979]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+offset_transform_enabled = true
+color = Color(0.93302256, 0.25172037, 0, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="PanelContainer2/HBoxContainer2" unique_id=1337149667]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+offset_transform_enabled = true
+color = Color(0.66944474, 0.5063123, 0, 1)
+
+[node name="HomeBtn" parent="." unique_id=2083984559 instance=ExtResource("2_ive6n")]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 112.0
+offset_bottom = 58.0
+text = "HOME"
+
+[node name="GoHome" type="Node" parent="HomeBtn" unique_id=2036929896]
+script = ExtResource("3_pcb4a")
+metadata/_custom_type_script = "uid://gmp1wxiwy1n8"

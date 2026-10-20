@@ -1,0 +1,169 @@
+[gd_scene format=3 uid="uid://bhlusn1ccigiy"]
+
+[ext_resource type="PackedScene" uid="uid://cbet0tqjycopk" path="res://cards/card.tscn" id="1_ifnqu"]
+[ext_resource type="Script" uid="uid://ctcnv6e3kcvpy" path="res://cards/cards.gd" id="1_xchjj"]
+[ext_resource type="Shader" uid="uid://bpow5b1ec5tvg" path="res://checkerboard.gdshader" id="2_k6wyi"]
+[ext_resource type="PackedScene" uid="uid://cfe1p2qnaebxk" path="res://cards/card_overlap.tscn" id="4_od30j"]
+[ext_resource type="PackedScene" uid="uid://cvxj1ovefesgh" path="res://buttons/button.tscn" id="5_n7mxt"]
+[ext_resource type="Script" uid="uid://gmp1wxiwy1n8" path="res://go_home.gd" id="6_n7mxt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_od30j"]
+shader = ExtResource("2_k6wyi")
+shader_parameter/size = 45.00000209
+shader_parameter/color1 = Color(0.19434983, 0.19434905, 0.19434923, 1)
+shader_parameter/color2 = Color(0.12591085, 0.12591085, 0.12591082, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n7mxt"]
+bg_color = Color(0, 0.39215687, 0.92156863, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 12
+
+[node name="CardsExample" type="Control" unique_id=1469181342]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xchjj")
+
+[node name="BG" type="ColorRect" parent="." unique_id=81403246]
+material = SubResource("ShaderMaterial_od30j")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CardsContainer" type="HBoxContainer" parent="." unique_id=1125870561]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -468.0
+offset_top = -202.0
+offset_right = 468.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Card" parent="CardsContainer" unique_id=853658833 instance=ExtResource("1_ifnqu")]
+layout_mode = 2
+
+[node name="Card2" parent="CardsContainer" unique_id=1725400857 instance=ExtResource("1_ifnqu")]
+layout_mode = 2
+
+[node name="Card3" parent="CardsContainer" unique_id=813560420 instance=ExtResource("1_ifnqu")]
+layout_mode = 2
+
+[node name="Card4" parent="CardsContainer" unique_id=1744482795 instance=ExtResource("1_ifnqu")]
+layout_mode = 2
+
+[node name="Card5" parent="CardsContainer" unique_id=836672390 instance=ExtResource("1_ifnqu")]
+layout_mode = 2
+
+[node name="CardsOverlapContainer" type="HBoxContainer" parent="." unique_id=1655002082]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -468.0
+offset_top = -202.0
+offset_right = 468.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="CardOverlap" parent="CardsOverlapContainer" unique_id=11887563 instance=ExtResource("4_od30j")]
+layout_mode = 2
+
+[node name="CardOverlap2" parent="CardsOverlapContainer" unique_id=1210352559 instance=ExtResource("4_od30j")]
+layout_mode = 2
+
+[node name="CardOverlap3" parent="CardsOverlapContainer" unique_id=230632459 instance=ExtResource("4_od30j")]
+layout_mode = 2
+
+[node name="CardOverlap4" parent="CardsOverlapContainer" unique_id=1646756298 instance=ExtResource("4_od30j")]
+layout_mode = 2
+
+[node name="CardOverlap5" parent="CardsOverlapContainer" unique_id=1884578576 instance=ExtResource("4_od30j")]
+layout_mode = 2
+
+[node name="CardOverlap6" parent="CardsOverlapContainer" unique_id=1409886381 instance=ExtResource("4_od30j")]
+layout_mode = 2
+
+[node name="ActionBtns" type="HBoxContainer" parent="." unique_id=1575240006]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.0
+offset_top = -26.0
+offset_right = 71.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="MinusBtn" parent="ActionBtns" unique_id=2083984559 instance=ExtResource("5_n7mxt")]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "-"
+
+[node name="PlusBtn" parent="ActionBtns" unique_id=1744729958 instance=ExtResource("5_n7mxt")]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "+"
+
+[node name="HomeBtn" parent="." unique_id=1483590883 instance=ExtResource("5_n7mxt")]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 112.0
+offset_bottom = 58.0
+text = "HOME"
+
+[node name="GoHome" type="Node" parent="HomeBtn" unique_id=1255954342]
+script = ExtResource("6_n7mxt")
+metadata/_custom_type_script = "uid://gmp1wxiwy1n8"
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=882534284]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -103.0
+offset_top = 32.0
+offset_right = 103.0
+offset_bottom = 109.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 47
+theme_override_styles/normal = SubResource("StyleBoxFlat_n7mxt")
+bbcode_enabled = true
+text = "[wave]CARDS[/wave]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="child_entered_tree" from="CardsContainer" to="." method="_on_cards_container_child_entered_tree"]
+[connection signal="child_exiting_tree" from="CardsContainer" to="." method="_on_cards_container_child_exiting_tree"]
+[connection signal="child_entered_tree" from="CardsOverlapContainer" to="." method="_on_cards_container_child_entered_tree"]
+[connection signal="child_exiting_tree" from="CardsOverlapContainer" to="." method="_on_cards_container_child_exiting_tree"]
+[connection signal="pressed" from="ActionBtns/MinusBtn" to="." method="_on_minus_btn_pressed"]
+[connection signal="pressed" from="ActionBtns/PlusBtn" to="." method="_on_plus_btn_pressed"]

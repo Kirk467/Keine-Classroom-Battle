@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://cdkkgh3lykotv"]
+
+[ext_resource type="PackedScene" uid="uid://83adef55pk3n" path="res://h_slider.tscn" id="1_hm4m4"]
+[ext_resource type="Script" uid="uid://dfn76rjmu7gfy" path="res://scenes/options_menu.gd" id="1_lfjc7"]
+[ext_resource type="Theme" uid="uid://lmkr8tk8vxup" path="res://assets/test_theme.tres" id="1_liyum"]
+[ext_resource type="Script" uid="uid://djyd6qf70u5p" path="res://h_slider.gd" id="2_lfjc7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijpji"]
+content_margin_left = 9.0
+bg_color = Color(0.9882353, 0.94509804, 0.92156863, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.33333334, 0.3764706, 0.6, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.1764706, 0.17254902, 0.2784314, 0.42352942)
+shadow_size = 10
+shadow_offset = Vector2(7, 5)
+
+[node name="OptionsMenu" type="CanvasLayer" unique_id=918676056]
+layer = 10
+script = ExtResource("1_lfjc7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2118178799]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.08235294)
+
+[node name="CenterContainer" type="PanelContainer" parent="ColorRect" unique_id=1192159410]
+custom_minimum_size = Vector2(400, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -250.0
+offset_right = 200.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ijpji")
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/CenterContainer" unique_id=1742381226]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer/MarginContainer" unique_id=963565520]
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_constants/separation = 30
+
+[node name="Master" type="Label" parent="ColorRect/CenterContainer/MarginContainer/VBoxContainer" unique_id=1001389186]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.99215686, 0.99215686, 0.99215686, 1)
+theme_override_colors/font_outline_color = Color(0.33333334, 0.3764706, 0.6, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/paragraph_spacing = 0
+theme_override_constants/outline_size = 13
+theme_override_font_sizes/font_size = 23
+text = "Master  Volume  Slider"
+
+[node name="MasterSlider" parent="ColorRect/CenterContainer/MarginContainer/VBoxContainer" unique_id=1697984203 instance=ExtResource("1_hm4m4")]
+layout_mode = 2
+mouse_filter = 1
+script = ExtResource("2_lfjc7")
+bus_name = "Master"
+
+[node name="Music" type="Label" parent="ColorRect/CenterContainer/MarginContainer/VBoxContainer" unique_id=1267220560]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.99215686, 0.99215686, 0.99215686, 1)
+theme_override_colors/font_outline_color = Color(0.33333334, 0.3764706, 0.6, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/paragraph_spacing = 0
+theme_override_constants/outline_size = 13
+theme_override_font_sizes/font_size = 23
+text = "Music  Volume  Slider"
+
+[node name="MusicSlider" parent="ColorRect/CenterContainer/MarginContainer/VBoxContainer" unique_id=615306384 instance=ExtResource("1_hm4m4")]
+layout_mode = 2
+script = ExtResource("2_lfjc7")
+bus_name = "MUSIC"
+
+[node name="SFX" type="Label" parent="ColorRect/CenterContainer/MarginContainer/VBoxContainer" unique_id=166047443]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.99215686, 0.99215686, 0.99215686, 1)
+theme_override_colors/font_outline_color = Color(0.33333334, 0.3764706, 0.6, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/paragraph_spacing = 0
+theme_override_constants/outline_size = 13
+theme_override_font_sizes/font_size = 23
+text = "SFX  Volume  Slider"
+
+[node name="SFXSlider" parent="ColorRect/CenterContainer/MarginContainer/VBoxContainer" unique_id=269535999 instance=ExtResource("1_hm4m4")]
+layout_mode = 2
+mouse_filter = 1
+script = ExtResource("2_lfjc7")
+bus_name = "SFX"
+
+[node name="ReturnToGame" type="Button" parent="ColorRect/CenterContainer/MarginContainer/VBoxContainer" unique_id=217385177]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("1_liyum")
+theme_override_font_sizes/font_size = 37
+text = "Return to Game"
+
+[node name="ReturnToMainMenu" type="Button" parent="ColorRect/CenterContainer/MarginContainer/VBoxContainer" unique_id=340975659]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("1_liyum")
+theme_override_font_sizes/font_size = 37
+text = "Exit to Main Menu"
+
+[connection signal="pressed" from="ColorRect/CenterContainer/MarginContainer/VBoxContainer/ReturnToGame" to="." method="_on_return_to_game_pressed"]
+[connection signal="pressed" from="ColorRect/CenterContainer/MarginContainer/VBoxContainer/ReturnToMainMenu" to="." method="_on_return_to_main_menu_pressed"]
