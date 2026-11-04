@@ -4,7 +4,7 @@ Keine's Classroom Battle (or Keine for short) is an educational game based on pr
 
 - See the [documentation](https://github.com/Kirk467/Keine-Classroom-Battle/blob/829c89fe440ff423acb73db2283e3b49a6fc6b6b/KEINE_IEEE%20Document.pdf)
 
-The .exe fill will be uploaded along with the organized file structure
+To launch the game, go to the releases section and [download the ZIP file, then extract it](https://github.com/Kirk467/Keine-Classroom-Battle/releases/tag/pre-release). Sample JSON files already exist for testing.
 
 ## Features
 
