@@ -148,6 +148,27 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e5sx5"]
+bg_color = Color(0.9882353, 0.94509804, 0.92156863, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5p1t"]
+bg_color = Color(0.96862745, 0.4745098, 0.32156864, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yijsk"]
+bg_color = Color(0.33333334, 0.3764706, 0.6, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [resource]
 Button/colors/font_color = Color(0.33333334, 0.3764706, 0.6, 1)
 Button/colors/font_disabled_color = Color(0.1764706, 0.17254902, 0.2784314, 1)
@@ -209,3 +230,6 @@ SpinBox/styles/down_background = SubResource("StyleBoxFlat_nx2ge")
 SpinBox/styles/down_background_hovered = SubResource("StyleBoxFlat_te1n6")
 SpinBox/styles/up_background = SubResource("StyleBoxFlat_y4rrh")
 SpinBox/styles/up_background_hovered = SubResource("StyleBoxFlat_te1n6")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_e5sx5")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_w5p1t")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_yijsk")

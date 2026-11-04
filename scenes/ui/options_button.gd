@@ -37,4 +37,4 @@ func unhover() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _on_pressed():
-	Transtest.change_scene("res://scenes/main_game.tscn")
+	get_tree().change_scene_to_file("res://scenes/main_game.tscn")

@@ -49,11 +49,22 @@ func _play_pressed():
 		
 #----------------------------------------------------------------
 
+func play_music(track: AudioStream, volume_db: float = 0.0) -> void:
 
-func play_music(stream: AudioStream):
-	if music_player.stream == stream and music_player.playing:
+	music_player.volume_db = volume_db
+
+	var bus_index = AudioServer.get_bus_index("MUSIC")
+
+	print("========== MUSIC DEBUG ==========")
+	print("Track: ", track.resource_path)
+	print("Player Volume: ", music_player.volume_db)
+	print("Music Bus Volume: ", AudioServer.get_bus_volume_db(bus_index))
+	print("Master Volume: ", AudioServer.get_bus_volume_db(0))
+
+	if music_player.stream == track and music_player.playing:
 		return
-	music_player.stream = stream
+
+	music_player.stream = track
 	music_player.play()
 	
 func stop_music():

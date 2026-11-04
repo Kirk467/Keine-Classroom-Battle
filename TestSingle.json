@@ -1,0 +1,143 @@
+
+[
+  {
+    "question": "What is the output of this Java code? int x = 4; x += 3; System.out.println(x);",
+    "options": ["4", "7", "3", "12"],
+    "answer": "7",
+    "category": "Programming",
+    "difficulty_level": 1
+  },
+  {
+    "question": "Which Java data type is commonly used to store whole numbers?",
+    "options": ["double", "boolean", "int", "char"],
+    "answer": "int",
+    "category": "Programming",
+    "difficulty_level": 1
+  },
+  {
+    "question": "Which Java String method returns the number of characters in a string?",
+    "options": ["size()", "length()", "count()", "capacity()"],
+    "answer": "length()",
+    "category": "Programming",
+    "difficulty_level": 1
+  },
+  {
+    "question": "Which method adds an element to the end of an ArrayList in Java?",
+    "options": ["insert()", "append()", "add()", "push()"],
+    "answer": "add()",
+    "category": "Programming",
+    "difficulty_level": 2
+  },
+  {
+    "question": "What does the == operator compare when used with Java primitive variables?",
+    "options": ["Memory addresses", "Values", "Variable names", "Data types only"],
+    "answer": "Values",
+    "category": "Programming",
+    "difficulty_level": 2
+  },
+  {
+    "question": "What is the primary purpose of a try-catch block in Java?",
+    "options": ["Repeat a statement", "Declare variables", "Handle exceptions", "Sort an array"],
+    "answer": "Handle exceptions",
+    "category": "Programming",
+    "difficulty_level": 3
+  },
+  {
+    "question": "What is the main purpose of the finally block in Java exception handling?",
+    "options": ["It runs only when an exception occurs", "It runs only when no exception occurs", "It executes after try-catch processing, normally regardless of whether an exception occurred", "It creates a new exception"],
+    "answer": "It executes after try-catch processing, normally regardless of whether an exception occurred",
+    "category": "Programming",
+    "difficulty_level": 3
+  },
+  {
+    "question": "Which data structure follows the Last In, First Out (LIFO) principle?",
+    "options": ["Queue", "Stack", "LinkedList", "Tree"],
+    "answer": "Stack",
+    "category": "Data Structures",
+    "difficulty_level": 1
+  },
+  {
+    "question": "Which data structure follows the First In, First Out (FIFO) principle?",
+    "options": ["Stack", "Heap", "Queue", "Binary Search Tree"],
+    "answer": "Queue",
+    "category": "Data Structures",
+    "difficulty_level": 1
+  },
+  {
+    "question": "In Java, which Stack method returns the top element without removing it?",
+    "options": ["pop()", "push()", "peek()", "remove()"],
+    "answer": "peek()",
+    "category": "Data Structures",
+    "difficulty_level": 2
+  },
+  {
+    "question": "In a Binary Search Tree, where are values smaller than the current node generally stored?",
+    "options": ["Right subtree", "Left subtree", "Root only", "Outside the tree"],
+    "answer": "Left subtree",
+    "category": "Data Structures",
+    "difficulty_level": 2
+  },
+  {
+    "question": "Which data structure consists of nodes connected through references or links?",
+    "options": ["Array", "Linked List", "Stack only", "Hash Table only"],
+    "answer": "Linked List",
+    "category": "Data Structures",
+    "difficulty_level": 2
+  },
+  {
+    "question": "What is the defining property of a Max Heap?",
+    "options": ["Every parent is smaller than its children", "Every parent is greater than or equal to its children", "All elements are sorted from left to right", "The smallest value is always at the root"],
+    "answer": "Every parent is greater than or equal to its children",
+    "category": "Data Structures",
+    "difficulty_level": 3
+  },
+  {
+    "question": "What is a hash collision?",
+    "options": ["When two keys produce the same hash table index", "When an array becomes full", "When a linked list loses a node", "When a stack becomes empty"],
+    "answer": "When two keys produce the same hash table index",
+    "category": "Data Structures",
+    "difficulty_level": 3
+  },
+  {
+    "question": "Which searching algorithm checks elements one at a time until the target is found?",
+    "options": ["Binary Search", "Linear Search", "Merge Sort", "Selection Sort"],
+    "answer": "Linear Search",
+    "category": "Algorithms",
+    "difficulty_level": 1
+  },
+  {
+    "question": "What does Selection Sort repeatedly search for during an ascending sort?",
+    "options": ["The largest element in the entire array", "The smallest element in the unsorted portion", "The middle element", "The first duplicate element"],
+    "answer": "The smallest element in the unsorted portion",
+    "category": "Algorithms",
+    "difficulty_level": 1
+  },
+  {
+    "question": "What is the time complexity of Binary Search on a sorted array?",
+    "options": ["O(n)", "O(n²)", "O(log n)", "O(1)"],
+    "answer": "O(log n)",
+    "category": "Algorithms",
+    "difficulty_level": 2
+  },
+  {
+    "question": "Which sorting algorithm uses the divide-and-conquer strategy by splitting an array into smaller parts and merging them?",
+    "options": ["Bubble Sort", "Selection Sort", "Merge Sort", "Linear Search"],
+    "answer": "Merge Sort",
+    "category": "Algorithms",
+    "difficulty_level": 2
+  },
+  {
+    "question": "What is the worst-case time complexity of Bubble Sort?",
+    "options": ["O(n)", "O(log n)", "O(n log n)", "O(n²)"],
+    "answer": "O(n²)",
+    "category": "Algorithms",
+    "difficulty_level": 3
+  },
+  {
+    "question": "What is the worst-case time complexity of Quick Sort when its pivot repeatedly produces highly unbalanced partitions?",
+    "options": ["O(n)", "O(log n)", "O(n log n)", "O(n²)"],
+    "answer": "O(n²)",
+    "category": "Algorithms",
+    "difficulty_level": 3
+  }
+]

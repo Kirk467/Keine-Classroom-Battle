@@ -1,4 +1,4 @@
-class_name ButtonsExample extends Control
+extends Control
 
 var tween_new: Tween
 
@@ -34,11 +34,21 @@ func new_tween(state: bool) -> void:
 
 
 func _on_singleplayer_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/main_game.tscn")
+	GameManager.is_single_player = true
+
+	Transitions.change_scene(
+		"res://scenes/singleplayer_game.tscn",
+		preload("res://assets/blue1.png")
+	)
 
 
 func _on_multiplayer_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/main_game.tscn")
+	GameManager.is_single_player = false
+
+	Transitions.change_scene(
+		"res://scenes/main_game.tscn",
+		preload("res://assets/green1.png")
+	)
 	
 
 func _on_options_button_pressed() -> void:

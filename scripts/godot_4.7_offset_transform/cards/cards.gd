@@ -1,8 +1,5 @@
 class_name CardsExample extends Control
 
-@export var card_scene = preload("uid://cbet0tqjycopk")
-@export var card_overlap_scene = preload("uid://cfe1p2qnaebxk")
-
 @onready var cards_container: HBoxContainer = $CardsContainer
 @onready var cards_overlap_container: HBoxContainer = $CardsOverlapContainer
 

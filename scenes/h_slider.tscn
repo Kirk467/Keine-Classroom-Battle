@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://83adef55pk3n"]
+[gd_scene format=3 uid="uid://xe21atuobckw"]
 
 [node name="HSlider" type="HSlider" unique_id=1697984203]
 offset_right = 789.0

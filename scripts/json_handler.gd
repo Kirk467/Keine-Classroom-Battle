@@ -14,4 +14,3 @@ func _process(delta: float) -> void:
 
 func on_button_pressed():
 	file_dialog.popup()
-	
