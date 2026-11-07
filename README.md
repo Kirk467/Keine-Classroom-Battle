@@ -17,6 +17,7 @@ To launch the game, go to the releases section and [download the ZIP file, then 
 ## Acknowledgements
 
  - [Based on Godot Dev Checkpoint's Tutorial on Building a Multiplayer Party Game in Godot 4.5 ](https://youtube.com/playlist?list=PLVzjdZVCXNTzmpnbYazr1VE6--WW_HB_B&si=h1WKfk1BSN6C3hEp)
+ - Button and Container Animations by [MrElipteach "You have to use this new Godot 4.7 UI feature".](https://youtu.be/pK2vI2-jCH4)
  - [Main Menu Music: Touhou Project - Nostalgic Blood of the East ~ Old World (Calm Night Remix); Arranged by 
 Stas Gavrik](https://youtu.be/RmdLDE2YyoY)
   - Arranged based on: 懐かしき東方の血　～ Old World (Natsukashiki touhou no chi) ||	Nostalgic Blood of the East ~ Old World from Touhou Eiyashou
